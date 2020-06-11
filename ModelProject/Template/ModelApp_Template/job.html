@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Job Data</title>
+  </head>
+  <h1>Display Data from Job Database </h1>
+  <body>
+    {% if job_list %}
+    <table style="width:100%">
+      <tr>
+        <th>Qualification</th>
+        <th>Location</th>
+        <th>Salary</th>
+        <th>PostingDate</th>
+      </tr>
+      {% for rec in job_list %}
+      <tr>
+        <td>{{rec.Qualification}}</td>
+        <td>{{rec.Location}}</td>
+        <td>{{rec.Salary}}</td>
+        <td>{{rec.PostingDate}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p> No records Found </p>
+   {% endif %}
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% if movies_list %}
+    <table>
+      <thread>
+      <th>Movie</th>
+      <th>Release</th>
+      <th>Hero</th>
+      <th>Heroine</th>
+      <th>Rating</th>
+      </thread>
+    {% for movie in movies_list %}
+    <tr>
+      <td>{{movie.movie}}</td>
+      <td>{{movie.release}}</td>
+      <td>{{movie.hero}}</td>
+      <td>{{movie.heroine}}</td>
+      <td>{{movie.points}}</td>
+    </tr>
+
+    {% endfor %}
+        </table>
+    {% endif %}
+  </body>
+</html>

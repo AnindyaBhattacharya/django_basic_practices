@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Book Data</title>
+  </head>
+  <h1>Display Data from Book Database</h1>
+  <body>
+    {% if book_list %}
+    <table style="width:100%">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Number</th>
+        <th>PublishedDate</th>
+      </tr>
+      {% for rec in book_list %}
+      <tr>
+        <td>{{rec.Title}}</td>
+        <td>{{rec.Author}}</td>
+        <td>{{rec.Number}}</td>
+        <td>{{rec.PublishedDate}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p> No records Found </p>
+   {% endif %}
+  </body>
+</html>
