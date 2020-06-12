@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{%extends 'UserAuthApp/base.html'%}
+{%block body_block%}
+<form method="POST">
+  {{form.as_p}}
+  {%csrf_token%}
+  <button type="submit">SignUp</button>
+</form>
+{%endblock%}
+</html>
